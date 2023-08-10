@@ -25,4 +25,4 @@ function FindMissingNumber(nums) {
   return nums;
 }
 
-FindMissingNumber([4, 0, 3, 1]); // 2
+FindMissingNumber([5, 2, 1, 3]); // 4
