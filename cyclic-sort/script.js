@@ -25,4 +25,23 @@ function FindMissingNumber(nums) {
   return nums;
 }
 
-FindMissingNumber([5, 2, 1, 3]); // 4
+FindMissingNumber([5, 2, 1, 3, 0]); // 4
+
+// Find All Numbers Disappeared in Array
+
+function FindNumbersDisappeared(nums) {
+  let i = 0;
+  let MissingNumbers = [];
+
+  while (i < nums.length) {
+    let j = nums[i] - 1;
+    nums[i] !== nums[j] ? ([nums[i], nums[j]] = [nums[j], nums[i]]) : (i += 1);
+  }
+
+  for (let i = 0; i < nums.length; i++)
+    if (nums[i] !== i + 1) MissingNumbers.push(i + 1);
+
+  return MissingNumbers;
+}
+
+FindNumbersDisappeared([5, 6, 3, 2, 1, 8, 8, 9]); // [ 4, 7 ]
