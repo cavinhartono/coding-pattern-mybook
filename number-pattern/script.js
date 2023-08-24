@@ -1,5 +1,5 @@
-function NumberPattern() {
-  for (let i = 5; i >= 1; i--) {
+function NumberPattern(num) {
+  for (let i = num; i >= 1; i--) {
     let row = "";
     for (let j = i; j >= 1; j--) {
       row += j + " ";
@@ -8,4 +8,4 @@ function NumberPattern() {
   }
 }
 
-NumberPattern();
+NumberPattern(5);
